@@ -3,7 +3,9 @@
 Hello RPDev, thank you for taking the time to check this out. I really appreciate your help.
 
 Below are the code examples I have added for this MVP of help.
+
 Example 1 is based on the calculation you shared in Discord.
+
 Example 2 is based on nothing. I just put in random values until it got _close_ to what I expected to see.
 
 RPDev says:
