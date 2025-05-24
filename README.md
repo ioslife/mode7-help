@@ -1,29 +1,32 @@
-## Playdate Mode7
+## Playdate Mode7 Help
 
-Playdate Mode7 is a library designed to recreate the graphics mode known as "Mode 7".
+Hello RPDev, thank you for taking the time to check this out. I really appreciate your help.
 
-![demo](assets/demo.gif)
+Below are the code examples I have added for this MVP of help.
+Example 1 is based on the calculation you shared in Discord.
+Example 2 is based on nothing. I just put in random values until it got _close_ to what I expected to see.
 
-## Features
+-- RPDev says 
+-- scale should be 39, the calc is (max - min) / step + 1. Rotation is 18 based on your spritesheet
+-- This causes the apples to only be visible from one side and then when you get close, the apples start getting big then small then big then small
 
-* Camera(s) with adjustable position, angle, tilt, FOV
-* Customizable sprites
-* Support to multiple displays (splitscreen)
-* Functions to project a 3D point from the world onto the screen
-* C and Lua support
+![Example](Source/images/gifs/gif_1.gif)
+```
+dataSource:setMinimumWidth(8)
+dataSource:setMaximumWidth(160)
+dataSource:setLengthForKey(39, mode7.sprite.datasource.kScale)
+dataSource:setLengthForKey(18, mode7.sprite.datasource.kAngle)
+```
 
-## Lua setup
+-- This one is the closest to what I would expect, but it still is not right. The angles don't render and the sprite disappears when the camera gets close
+![Example](Source/images/gifs/gif_2.gif)
+```
+dataSource:setMinimumWidth(8)
+dataSource:setMaximumWidth(64) -- I changed this to 64 and it looks better. Random!!
+dataSource:setLengthForKey(14, mode7.sprite.datasource.kScale) -- 14 is a random number that just happened to look good
+-- dataSource:setLengthForKey(18, mode7.sprite.datasource.kAngle)
+```
 
-The library has a simplified Lua setup:
-* Locate the pre-compiled binaries for your platform in the *platforms/[platform]* folder
-* Copy the files (elf, dylib, dll) into the Source folder of the project
-* Import the library: `import mode7`
+My original 17 frames spritesheet can be found in `Source/images/apple-table-16-16`
 
-## Documentation
-
-* [Lua API Documentation](https://risolvipro.github.io/playdate-mode7/Lua-API.html)
-* [C API Documentation](https://risolvipro.github.io/playdate-mode7/C-API.html)
-
-## Assets
-
-The assets included in the demo (track-0, full-car) are part of [P-Racing](https://play.date/games/p-racing/), please don't use them in your final game.
+![16x16 Apples](Source/images/apple-table-16-16.png)
