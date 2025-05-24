@@ -33,6 +33,6 @@ dataSource:setLengthForKey(14, mode7.sprite.datasource.kScale) -- 14 is a random
 -- dataSource:setLengthForKey(18, mode7.sprite.datasource.kAngle)
 ```
 
-My original 17 frames spritesheet can be found in `Source/images/apple-table-16-16`
+My original 18 frames spritesheet can be found in `Source/images/apple-table-16-16`
 
 ![16x16 Apples](Source/images/apple-table-16-16.png)
