@@ -10,7 +10,7 @@ Example 2 is based on nothing. I just put in random values until it got _close_ 
 -- scale should be 39, the calc is (max - min) / step + 1. Rotation is 18 based on your spritesheet
 -- This causes the apples to only be visible from one side and then when you get close, the apples start getting big then small then big then small
 
-![Example](Source/images/gifs/gif_1.gif)
+![Example](gifs/gif_1.gif)
 ```
 dataSource:setMinimumWidth(8)
 dataSource:setMaximumWidth(160)
@@ -19,7 +19,7 @@ dataSource:setLengthForKey(18, mode7.sprite.datasource.kAngle)
 ```
 
 -- This one is the closest to what I would expect, but it still is not right. The angles don't render and the sprite disappears when the camera gets close
-![Example](Source/images/gifs/gif_2.gif)
+![Example](gifs/gif_2.gif)
 ```
 dataSource:setMinimumWidth(8)
 dataSource:setMaximumWidth(64) -- I changed this to 64 and it looks better. Random!!
