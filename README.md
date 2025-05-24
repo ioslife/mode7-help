@@ -19,6 +19,7 @@ dataSource:setLengthForKey(18, mode7.sprite.datasource.kAngle)
 ```
 
 -- This one is the closest to what I would expect, but it still is not right. The angles don't render and the sprite disappears when the camera gets close
+
 ![Example](gifs/gif_2.gif)
 ```
 dataSource:setMinimumWidth(8)
